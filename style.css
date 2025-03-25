@@ -1,6 +1,6 @@
 body {
-   border: 1vw solid rgb(80, 159, 224);
-   background-color: rgb(216, 237, 240);
+   border: 12px solid rgb(207, 146, 105);
+   background-color: rgb(245, 236, 230);
    font-family: "Pixelify sans", sans-serif;
    font-size: 1.2rem;
    text-align: center;
@@ -8,18 +8,44 @@ body {
    margin-bottom: 1rem;
    margin-left: 1rem;
    margin-right: 1rem;
- 
+   align-items: center;
+   border-radius: 5px;
+	display: flex;
+	flex-direction: column;
  }
  
- video {
-   align-self: center;
-   align-content: center;
+ main
+ {
+   max-width: 900px;
+	width: 100%;
+	padding: 10px;
+	align-items: center;
    text-align: center;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   margin-right: 1rem;
  }
- 
+ video {
+   border: solid;
+   border: 6px solid rgb(207, 146, 105);
+ }
+
+ table {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 6px;
+	width: 100%;
+	flex-direction: column;
+	border: none;
+   
+}
+
  h1 {
    font-size: 3.0rem;
-   color: rgb(39, 149, 177);
+   color: rgb(177, 113, 39);
    font-weight: bold;
    text-transform: uppercase;
    padding-bottom: 2px;
@@ -33,7 +59,7 @@ body {
  }
  
  a{
-   color: rgb(23, 180, 107);
+   color: rgb(68, 180, 23);
    font-size: 2rem;
    padding-bottom: 10px;
    padding-top: 10px;
@@ -55,7 +81,7 @@ body {
  ol {
    font-size: 1.4rem;
    font-weight: 600;
-   color: rgb(19, 158, 168);
+   color: rgb(168, 74, 19);
    line-height: 1.3;
    padding-bottom: 10px;
    padding-top: 10px;
