@@ -1,0 +1,108 @@
+:root {
+   --bgColour: #0e0d0d;
+	--menuColour: #181818;
+	--mainTextColor: #d8d8d8;
+   --hoverColour: #399ec5;
+}
+
+.cursor, .hand {
+   position: fixed;
+   left: 0;
+   border-radius: 50%;
+   pointer-events: none;
+   transition: transform .1s;
+}
+
+.cursor {
+   background: white;
+   top: 0;
+   width: 20px;
+   height: 20px;
+   z-index: 1;
+}
+
+.hand {
+   background-color: red;
+   top: 50%;
+   width: 150px;
+   height: 150px;
+   z-index: 2;
+   display: grid;
+   place-content: center;
+   transform: rotate(45deg);
+   opacity: 0;
+}
+
+.hand cursor{
+   width: 80px;
+}
+
+/*
+#konva-container{
+   position: absolute; top: 0;
+   position: absolute; left: 0;
+}
+*/
+body {
+   font-family: "Roboto Condensed", monospace;
+   background-color: var(--bgColour);
+}
+
+header {
+   font-family: "Island Moments", monospace;
+   text-align: center;
+   background-color: var(--menuColour);
+   color: var(--mainTextColor);
+   padding: 20px 0;
+   margin: 0;
+   font-size: 4vw;
+   font-weight: 700;
+   transition: 0.5s;
+ }
+
+ header h2{
+   font-family: "Roboto Condensed", monospace;
+   text-align: center;
+   background-color: var(--menuColour);
+   color: var(--mainTextColor);
+   margin: 0;
+   font-size: 1.5vw;
+ }
+
+.sidebar {
+   z-index: 3;
+   height: 100%; 
+   width: 20vw; 
+   top: 0;
+   left: 0;
+   position: fixed;
+   background-color: var(--menuColour); 
+   overflow: hidden;
+   padding-top: 3vw;
+   transition: 0.5s;
+ }
+
+.sidebar a {
+   padding: 8px 8px 8px 32px;
+   padding-top: 2.5vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  color: var(--mainTextColor);
+  display: block;
+  transition: 0.5s;
+}
+
+.sidebar a:hover{
+   color: var(--hoverColour)
+ }
+ 
+footer {
+   position:absolute; bottom: 0;
+   align-self: baseline;
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   background-color: var(--menuColour);
+   color: var(--mainTextColor);
+   transition: 0.5s;
+ }
