@@ -1,101 +1,173 @@
 :root {
-   --bgColour: #0e0d0d;
-	--menuColour: #181818;
+   --bgColour: #1a1a20;
+	--menuColour: #252529;
 	--mainTextColor: #d8d8d8;
-   --hoverColour: #399ec5;
+   --hoverColour: #3d2d55;
+   --selectColour: #984bb6;
 }
 
-.cursor, .hand {
-   position: fixed;
-   left: 0;
-   border-radius: 50%;
-   pointer-events: none;
-   transition: transform .1s;
-}
-
-.cursor {
-   background: white;
-   top: 0;
-   width: 20px;
-   height: 20px;
-   z-index: 1;
-}
-
-.hand {
-   background-color: red;
-   top: 50%;
-   width: 150px;
-   height: 150px;
-   z-index: 2;
-   display: grid;
-   place-content: center;
-   transform: rotate(45deg);
-   opacity: 0;
-}
-
-.hand cursor{
-   width: 80px;
-}
-
-/*
-#konva-container{
-   position: absolute; top: 0;
-   position: absolute; left: 0;
-}
-*/
 body {
    font-family: "Roboto Condensed", monospace;
    background-color: var(--bgColour);
+   color: var(--mainTextColor);
+   margin: 0;
+   font-size: 2vw;
+   font-weight: 700;
+   transition: 0.5s;
+   text-align: center;
+   transition: 0.5s;
+   overflow: hidden;
 }
 
 header {
+   z-index: 3;
    font-family: "Island Moments", monospace;
    text-align: center;
    background-color: var(--menuColour);
-   color: var(--mainTextColor);
-   padding: 20px 0;
+   color: #984bb6;
+   padding: 1.5vw 0;
+   height: 10vw;
    margin: 0;
    font-size: 4vw;
    font-weight: 700;
    transition: 0.5s;
+   position: absolute; top: 0;
+   width: 100%;
+ }
+
+ header h1 {
+   padding-left: 38vw;
  }
 
  header h2{
    font-family: "Roboto Condensed", monospace;
    text-align: center;
-   background-color: var(--menuColour);
+   background-color: var(--headerColour);
    color: var(--mainTextColor);
    margin: 0;
    font-size: 1.5vw;
+   padding-left: 35vw;
  }
+
+ header span{
+   font-family: "Roboto Condensed", monospace;
+   text-align: center;
+   background-color: var(--headerColour);
+   color: var(--mainTextColor);
+   margin: 0;
+   font-size: 1vw;
+   padding-left: 24vw;
+ }
+
+button {
+   background-color: #151518;
+   color: var(--mainTextColor);
+   border: none;
+	padding: 1vw 4vw;
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 2vw;
+	transition: 0.3s ease;
+}
+
+span button{
+   background-color: #53242b;
+}
+
+.button-container{
+   margin-bottom: 1.5vw;
+}
+
+.button-container :hover{
+   background-color: var(--hoverColour);
+ }
+
+span button:hover{
+   background-color: rgb(161, 44, 44);
+ }
+
+h3 {
+   padding: 0.5vw;
+}
+
+#colourTest, #colourTest2{
+   padding: 1vw;
+   padding-bottom: 0.5vw;
+   padding-top: 0.5vw;
+   margin: 1vw;
+   text-shadow: -0.1vw 0 #000, 0.1vw 0 #000, 0 0.1vw #000, 0 -0.1vw #000;
+   border-color: black;
+   border-width: 0.2vw;
+   border-style: solid;
+}
+
+
+.slider {
+   -webkit-appearance: none;  /* Override default CSS styles */
+   appearance: none;
+   width: 15vw;
+   height: 1vw; /* Specified height */
+   background: #4d4d4d; /* Grey background */
+   outline: none; /* Remove outline */
+   border-radius: 1vw; 
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%; 
+  background: #984bb6;
+  cursor: pointer;
+}
+
+#speedSlider, #sizeSlider{
+   margin-bottom: 2vw;
+}
+
+
+#redSlider::-webkit-slider-thumb, #redSlider2::-webkit-slider-thumb{
+   background: red;
+}
+#greenSlider::-webkit-slider-thumb, #greenSlider2::-webkit-slider-thumb{
+   background: green;
+}
+#blueSlider::-webkit-slider-thumb, #blueSlider2::-webkit-slider-thumb{
+   background: blue;
+}
+
 
 .sidebar {
    z-index: 3;
    height: 100%; 
    width: 20vw; 
-   top: 0;
    left: 0;
    position: fixed;
+   position: absolute; top: 0;
    background-color: var(--menuColour); 
-   overflow: hidden;
-   padding-top: 3vw;
+   padding-top: 2vw;
    transition: 0.5s;
+   border-width: 0.6vw;
+   border-color: var(--bgColour);
+   border-style: solid;
+   border-top: 0;
+   border-left: 0;
+   border-bottom: 0;
  }
 
-.sidebar a {
-   padding: 8px 8px 8px 32px;
-   padding-top: 2.5vw;
+.sidebar div {
+   padding: 2.2vw;
+   padding-top: 0.3vw;
+   padding-bottom: 0.3vw;
   text-decoration: none;
   font-size: 1.5vw;
   color: var(--mainTextColor);
-  display: block;
+  display: grid;
   transition: 0.5s;
 }
 
-.sidebar a:hover{
-   color: var(--hoverColour)
- }
- 
+
 footer {
    position:absolute; bottom: 0;
    align-self: baseline;
